@@ -1,51 +1,56 @@
-import { Main, MediaDiv } from "./styledComponent";
+import {
+    EachPostli,
+    Footer,
+    FooterBig,
+    FooterSmall,
+    Header,
+    LoadingDiv,
+    LoadingImg,
+    Main,
+    MediaDiv,
+    PagenumberDiv,
+    PagingSection,
+    Postlink,
+    PostListDiv,
+    PostRepl,
+    PostSection,
+    PostTitle,
+    PostTitleDiv,
+    SlogunBig,
+    SlogunSection,
+    SlogunSmall,
+    SubHeaderDiv,
+    TitleBig,
+    TitleLogoDiv,
+    TitleSmall,
+} from "./styledComponents";
 // yarn add @fortawesome/free-solid-svg-icons @fortawesome/react-fontawesome @fortawesome/fontawesome-svg-core @fortawesome/free-brands-svg-icons
 
-import { darkTheme, GlobalStyles, lightTheme } from "./styles";
-import { ThemeProvider } from "styled-components";
-import { useState } from "react";
-import Header from "./Header";
-import Slogun from "./Slogun";
-import Footer from "./Footer";
-import ShowPostList from "./ShowPostList";
+import{
+    faSun,
+    faMoon,
+    faArrowsRotate,
+    faPenToSquare,
+    faLocationPin,
+    faArrowLeft,
+    faArrowRight,
+} from '@fortawesome/free-solid-svg-icons';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faReact} from '@fortawesome/free-brands-svg-icons';
 
-import { Routes, Route } from "react-router-dom";
-import ShowPost from "./ShowPost";
-import WritePost from "./WritePost";
-
-const API_URL = "https://reactapitest.pythonanywhere.com/api/";
 function App() {
-  const [darkMode, setDarkMode] = useState(true);
-
-  return (
+    return ( 
     <>
-      <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
-        <GlobalStyles />
         <MediaDiv>
-          <Header darkMode={darkMode} setDarkMode={setDarkMode} />
-          <Main>
-            <Slogun />
-            <Routes>
-              <Route
-                exact
-                path="/"
-                element={<ShowPostList apiUrl={API_URL} />}
-              ></Route>
-              <Route
-                path="/write"
-                element={<WritePost apiUrl={API_URL} />}
-              ></Route>
-              <Route
-                path="/post/:postID"
-                element={<ShowPost apiUrl={API_URL} />}
-              ></Route>
-            </Routes>
-          </Main>
-          <Footer />
+            <Header>
+                <TitleLogoDiv>
+                    <TitleBig>멋사</TitleBig>
+                    <TitleSmall>익명게시판</TitleSmall>
+                </TitleLogoDiv>
+            </Header>
         </MediaDiv>
-      </ThemeProvider>
-    </>
-  );
+    </>;
+    );
 }
 
 export default App;
