@@ -10,8 +10,9 @@ import {
     MediaDiv,
     PagenumberDiv,
     PagingSection,
-    Postlink,
+    PostLink,
     PostListDiv,
+    EachPostLi,
     PostRepl,
     PostSection,
     PostTitle,
@@ -63,7 +64,15 @@ function App() {
                             <FontAwesomeIcon icon={faPenToSquare} />
                         </PostTitleDiv>
                         <PostListDiv>
-                            
+                            <ul>
+                                <EachPostLi>
+                                    <div>
+                                        <FontAwesomeIcon icon={faLocationPin} />
+                                        <PostLink>서강학보, 시사 N 대학기자상 취재</PostLink>
+                                    </div>
+                                    <PostRepl>[35]</PostRepl>
+                                </EachPostLi>
+                            </ul>
                         </PostListDiv>
                     </PostSection>
                 </Main>

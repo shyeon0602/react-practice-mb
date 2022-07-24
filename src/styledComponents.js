@@ -117,10 +117,12 @@ export const EachPostLi = styled.li`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  text-align: center;
 `;
 
 export const PostLink = styled.span`
   margin-left: 5px;
+  text-align: center;
 `;
 export const PostRepl = styled.div`
   font-family: "Courier New", Courier, monospace;
