@@ -10,7 +10,7 @@ export const MediaDiv = styled.div`
     width: 100%;
   }
 `;
-export const HeaderDiv = styled.div`
+export const Header = styled.div`
   width: 768px;
   height: auto;
   display: flex;

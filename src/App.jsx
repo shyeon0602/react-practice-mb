@@ -40,16 +40,16 @@ import {faReact} from '@fortawesome/free-brands-svg-icons';
 
 function App() {
     return ( 
-    <>
-        <MediaDiv>
-            <Header>
-                <TitleLogoDiv>
-                    <TitleBig>멋사</TitleBig>
-                    <TitleSmall>익명게시판</TitleSmall>
-                </TitleLogoDiv>
-            </Header>
-        </MediaDiv>
-    </>;
+        <>
+            <MediaDiv>
+                <Header>
+                    <TitleLogoDiv>
+                        <TitleBig>멋사</TitleBig>
+                        <TitleSmall>익명게시판</TitleSmall>
+                    </TitleLogoDiv>
+                </Header>
+            </MediaDiv>
+        </>
     );
 }
 
