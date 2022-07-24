@@ -1,4 +1,5 @@
 import React from 'react';
+import "./Hello.css"
 
 function Hello(){
     const PracticeStyle={
@@ -8,7 +9,7 @@ function Hello(){
     };
     return (
         <>
-        <div style={PracticeStyle}>Hello World!</div>
+            <div className='red'>Hello World!</div>
         </>
     );
 }
