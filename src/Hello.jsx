@@ -1,6 +1,15 @@
 import React from 'react';
 
 function Hello(){
-    return <div>Hello World!</div>;
+    const PracticeStyle={
+        marginTop: "10px",
+        backgroundColor:"purple",
+        color:"white"
+    };
+    return (
+        <>
+        <div style={PracticeStyle}>Hello World!</div>
+        </>
+    );
 }
 export default Hello;
