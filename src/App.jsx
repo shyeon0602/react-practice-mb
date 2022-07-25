@@ -24,6 +24,7 @@ import {
     TitleBig,
     TitleLogoDiv,
     TitleSmall,
+    loading,
 } from "./styledComponents";
 // yarn add @fortawesome/free-solid-svg-icons @fortawesome/react-fontawesome @fortawesome/fontawesome-svg-core @fortawesome/free-brands-svg-icons
 
@@ -39,14 +40,16 @@ import{
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faReact} from '@fortawesome/free-brands-svg-icons';
 import { ThemeProvider } from "styled-components";
-import {darkTheme, GlobalStyles} from "./styles";
+import {darkTheme, GlobalStyles, lightTheme} from "./styles";
+import loadingIcon from "./loading.svg";
 
 function App() {
     const darkMode = false;
+    const loading = true;
     return ( 
         <>
         <GlobalStyles />
-        <ThemeProvider theme={darkTheme}>
+        <ThemeProvider theme={darkMode?darkTheme:lightTheme}>
             <MediaDiv>
                 <Header>
                     <TitleLogoDiv>
@@ -79,6 +82,11 @@ function App() {
                             <FontAwesomeIcon icon={faPenToSquare} />
                         </PostTitleDiv>
                         <PostListDiv>
+                        {loading ? (
+                            <LoadingDiv>
+                                <LoadingImg src={loadingIcon}></LoadingImg>
+                            </LoadingDiv>
+                            ) : (
                             <ul>
                                 <EachPostLi>
                                     <div>
@@ -88,6 +96,7 @@ function App() {
                                     <PostRepl>[35]</PostRepl>
                                 </EachPostLi>
                             </ul>
+                        )}
                         </PostListDiv>
                     </PostSection>
                     <PagingSection>

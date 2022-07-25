@@ -108,6 +108,9 @@ export const LoadingDiv = styled.div`
   margin-top: 15px;
 `;
 
+export const loading = styled.div`
+`;
+
 export const LoadingImg = styled.img`
   width: 30px;
 `;
