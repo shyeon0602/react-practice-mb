@@ -75,7 +75,21 @@ function App() {
                             </ul>
                         </PostListDiv>
                     </PostSection>
+                    <PagingSection>
+                        <PagenumberDiv>
+                            <FontAwesomeIcon icon={faArrowLeft} />
+                        </PagenumberDiv>
+                        <PagenumberDiv>2</PagenumberDiv>
+                        <PagenumberDiv>
+                            <FontAwesomeIcon icon={faArrowRight} />
+                        </PagenumberDiv>
+                    </PagingSection>
                 </Main>
+                <Footer>
+                    <FontAwesomeIcon icon={faReact} />
+                    <FooterBig>for react study</FooterBig>
+                    <FooterSmall>2022. by seohyun</FooterSmall>
+                </Footer>
             </MediaDiv>
         </>
     );
