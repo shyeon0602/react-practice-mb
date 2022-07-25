@@ -109,7 +109,7 @@ function App() {
                         <PagenumberDiv>
                             <FontAwesomeIcon icon={faArrowLeft} />
                         </PagenumberDiv>
-                        <PagenumberDiv>2</PagenumberDiv>
+                        <PagenumberDiv>1</PagenumberDiv>
                         <PagenumberDiv>
                             <FontAwesomeIcon icon={faArrowRight} />
                         </PagenumberDiv>
