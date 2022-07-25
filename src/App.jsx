@@ -38,17 +38,32 @@ import{
 } from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faReact} from '@fortawesome/free-brands-svg-icons';
+import { ThemeProvider } from "styled-components";
+import {darkTheme, GlobalStyles} from "./styles";
 
 function App() {
+    const darkMode = false;
     return ( 
         <>
+        <GlobalStyles />
+        <ThemeProvider theme={darkTheme}>
             <MediaDiv>
                 <Header>
                     <TitleLogoDiv>
                         <TitleBig>멋사</TitleBig>
                         <TitleSmall>익명게시판</TitleSmall>
                     </TitleLogoDiv>
-                    <SubHeaderDiv>다크모드 버튼</SubHeaderDiv>
+                    <SubHeaderDiv>
+                        {darkMode ? (
+                            <div>
+                                <FontAwesomeIcon icon={faSun} />
+                            </div>
+                        ) : (
+                            <div>
+                                <FontAwesomeIcon icon={faMoon} />
+                            </div>
+                        )}
+                        </SubHeaderDiv>
                 </Header>
                 <Main>
                     <SlogunSection>
@@ -91,6 +106,7 @@ function App() {
                     <FooterSmall>2022. by seohyun</FooterSmall>
                 </Footer>
             </MediaDiv>
+        </ThemeProvider>
         </>
     );
 }
