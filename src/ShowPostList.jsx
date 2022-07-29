@@ -1,33 +1,29 @@
 import {
-    LoadingDiv,
-    LoadingImg,
-    PagenumberDiv,
-    PagingSection,
-    PostLink,
-    PostListDiv,
-    EachPostLi,
-    PostRepl,
-    PostSection,
-    PostTitle,
-    PostTitleDiv,
-    loading,
+  LoadingDiv,
+  LoadingImg,
+  PagenumberDiv,
+  PagingSection,
+  PostListDiv,
+  EachPostLi,
+  PostSection,
+  PostTitle,
+  PostTitleDiv,
 } from "./styledComponents";
-import{
-    faArrowsRotate,
-    faPenToSquare,
-    faLocationPin,
-    faArrowLeft,
-    faArrowRight,
-} from '@fortawesome/free-solid-svg-icons';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {
+  faArrowsRotate,
+  faPenToSquare,
+  faArrowLeft,
+  faArrowRight,
+} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import loadingIcon from "./loading.svg";
 
-function ShowPostList({isPost, loading}) {
+function ShowPostList({ isPost, loading, addPost, postList }) {
   return (
     <>
       <PostSection>
         <PostTitleDiv>
-          <FontAwesomeIcon icon={faArrowsRotate} />
+          <FontAwesomeIcon onClick={addPost} icon={faArrowsRotate} />
           <PostTitle>익명게시판</PostTitle>
           <FontAwesomeIcon icon={faPenToSquare} />
         </PostTitleDiv>
@@ -40,13 +36,13 @@ function ShowPostList({isPost, loading}) {
             <LoadingDiv>아직 기록된 글이 없습니다.</LoadingDiv>
           ) : (
             <ul>
-              <EachPostLi>
-                <div>
-                  <FontAwesomeIcon icon={faLocationPin} />
-                  <PostLink>서강학보, 시사 N 대학기자상 취재</PostLink>
-                </div>
-                <PostRepl>[35]</PostRepl>
-              </EachPostLi>
+              {postList.map((element) => (
+                <EachPostLi
+                  key={element.id}
+                  title={element.title}
+                  replCount={element.replCount}
+                />
+              ))}
             </ul>
           )}
         </PostListDiv>
