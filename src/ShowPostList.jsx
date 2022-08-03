@@ -8,6 +8,7 @@ import {
   PostSection,
   PostTitle,
   PostTitleDiv,
+  CursorDiv,
 } from "./styledComponents";
 import {
   faArrowsRotate,
@@ -44,7 +45,9 @@ function ShowPostList() {
         <PostTitleDiv>
           <FontAwesomeIcon onClick={addPost} icon={faArrowsRotate} />
           <PostTitle>익명게시판</PostTitle>
-          <FontAwesomeIcon icon={faPenToSquare} />
+          <CursorDiv>
+            <FontAwesomeIcon icon={faPenToSquare} />
+          </CursorDiv>
         </PostTitleDiv>
         <PostListDiv>
           {loading ? (

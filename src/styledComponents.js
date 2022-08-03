@@ -108,8 +108,7 @@ export const LoadingDiv = styled.div`
   margin-top: 15px;
 `;
 
-export const loading = styled.div`
-`;
+export const loading = styled.div``;
 
 export const LoadingImg = styled.img`
   width: 30px;
@@ -247,4 +246,8 @@ export const PostSubmit = styled.div`
   font-family: "Black Han Sans", sans-serif;
   font-size: 20px;
 `;
+// export const CursorDiv = styled.span`
+//   cursor: pointer;
+// `;
+
 // export default MediaDiv;
