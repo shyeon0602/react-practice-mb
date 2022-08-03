@@ -1,12 +1,8 @@
-import {
-    PostLink,
-    EachPostLi,
-    PostRepl,
-} from "./styledComponents";
-import{faLocationPin} from '@fortawesome/free-solid-svg-icons';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import { PostLink, EachPostLi, PostRepl } from "./styledComponents";
+import { faLocationPin } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-function EachPostList({title, replCount}) {
+function EachPostList({ title, replCount }) {
   return (
     <EachPostLi>
       <div>

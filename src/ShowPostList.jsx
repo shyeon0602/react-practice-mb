@@ -17,8 +17,27 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import loadingIcon from "./loading.svg";
+import EachPostList from "./EachPostList";
+import { useState } from "react";
 
-function ShowPostList({ isPost, loading, addPost, postList }) {
+const initialPostList = [
+  { id: 1, title: "서강학보, 시사 N 대학기자상 취재", replCount: 1 },
+  { id: 2, title: "서강학보, 시사 N 대학기자상 취재", replCount: 31 },
+  { id: 3, title: "서강학보, 시사 N 대학기자상 취재", replCount: 12 },
+];
+
+function ShowPostList() {
+  const [loading, setLoading] = useState(false);
+  const [isPost, setIsPost] = useState(false);
+  const [postList, setPostList] = useState(initialPostList);
+
+  const addPost = () => {
+    setPostList((postList) => [
+      ...postList,
+      { id: 4, title: "서강학보, 시사 N 대학기자상 취재", replCount: 3 },
+    ]);
+  };
+
   return (
     <>
       <PostSection>
@@ -40,7 +59,8 @@ function ShowPostList({ isPost, loading, addPost, postList }) {
                 <EachPostLi
                   key={element.id}
                   title={element.title}
-                  replCount={element.replCount}
+                  // replCount={element.replCount}
+                  poastID={element.id}
                 />
               ))}
             </ul>
